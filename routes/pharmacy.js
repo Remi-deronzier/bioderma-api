@@ -59,7 +59,7 @@ router.get("/pharmacies", async (req, res) => {
     const count = await Pharmacy.countDocuments();
     res.status(200).json({
       count: count,
-      rooms: pharmacies,
+      pharmacies: pharmacies,
     });
   } catch (error) {
     res.status(400).json({ message: error.message });

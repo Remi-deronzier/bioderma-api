@@ -11,8 +11,9 @@ const Article = mongoose.model("Article", {
     maxLength: 500,
   },
   content: Array, // [{"subtitle": "...", "paragraph": ["...", "..."], "image": "http://"}, ... {}]
-  categories: Array, // ["eczéma", "redness"]
+  category: String, // ["eczéma", "redness"]
   thumbnail: String,
+  target: String,
   author: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
